@@ -27,6 +27,11 @@ class Program
             }
             if (int.TryParse(response, out int nota))
             {
+                if (nota < 0)
+                {
+                    Console.WriteLine("Las notas no pueden ser menores a  0 ");
+                    break;
+                }
                 contador++;
                 notas += nota;
             }
